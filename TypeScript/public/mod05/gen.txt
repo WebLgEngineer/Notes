@@ -1,0 +1,1 @@
+tsc sayhi.js --declaration --allowJs --emitDeclarationOnly --outDir types
