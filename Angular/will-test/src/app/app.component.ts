@@ -7,4 +7,21 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'will-test';
+  url = 'https://www.google.com/';
+  keyword = '';
+  counter = 0;
+  // constructor(){
+  //   setTimeout(() => {
+  //     this.title = 'HI';
+  //   }, 2000);
+  // }
+  keywordReset(): void {
+    this.keyword = '';
+  }
+  changeCounter(): void {
+    this.counter++;
+  }
+  getStyle(): any {
+    return { 'font-size': (12 + this.counter) + 'px' };
+  }
 }

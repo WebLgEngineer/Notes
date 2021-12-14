@@ -1,1 +1,24 @@
-<p>HI</p>
+<app-header #theader></app-header>
+<input type="text" [(ngModel)]="keyword" (keyup.escape)="keywordReset()" #tKeyword>
+<p>{{ tKeyword.value.length }}</p>
+
+<p (ckick)="theader.title='123'">123</p>
+
+<button (click)="changeCounter()">click</button>
+<p>{{ counter }}</p>
+
+<p [ngStyle]="getStyle()">1234578</p>
+<p [style.font-size]="(12 + counter) + 'px'">1234578</p>
+
+<p [ngClass]="{highlight: counter % 2 == 0}">ngClass</p>
+<p [class.highlight]="( counter % 2 == 0 )">ngClass</p>
+
+<p *ngIf="( counter % 2 == 0 )">ngIf</p>
+
+
+
+<h1>{{ title | lowercase}}</h1>
+
+<app-page1></app-page1>
+
+<app-footer></app-footer>
