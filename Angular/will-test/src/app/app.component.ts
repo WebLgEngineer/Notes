@@ -10,6 +10,10 @@ export class AppComponent {
   url = 'https://www.google.com/';
   keyword = '';
   counter = 0;
+  pi = 3.14159265359;
+  today: number = Date.now();
+  object = {foo: 'bar', baz: 'qux', nested: {xyz: 3, numbers: [1, 2, 3, 4, 5]}};
+  temp = 'Exported from';
   // constructor(){
   //   setTimeout(() => {
   //     this.title = 'HI';

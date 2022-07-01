@@ -19,6 +19,48 @@
 
 <h1>{{ title | lowercase}}</h1>
 
+<div>
+
+    <p>
+        No specified formatting:
+        {{pi | number}}
+        <!--output: '3.142'-->
+    </p>
+
+    <p>
+        With digitsInfo parameter specified:
+        {{pi | number:'4.1-5'}}
+        <!--output: '0,003.14159'-->
+    </p>
+
+    <p>
+        With digitsInfo and
+        locale parameters specified:
+        <!-- {{pi | number:'4.1-5':'fr'}} -->
+        <!--output: '0 003,14159'-->
+    </p>
+
+</div>
+
+
+<div [style.border]="'1px solid #000'">
+  <p>Today is {{today | date:'yyyy-MM-dd'}}</p>
+  <p>Or if you prefer, {{today | date:'fullDate'}}</p>
+  <p>The time is {{today | date:'h:mm a z'}}</p>
+</div>
+
+
+
+<div>
+  <p>Without JSON pipe:</p>
+  <pre>{{object}}</pre>
+  <p>With JSON pipe:</p>
+  <pre>{{object | json}}</pre>
+</div>
+
+<p>{{ temp | uppercase | slice:0:5}}</p>
+
+<app-article-list></app-article-list>
 <app-page1></app-page1>
 
 <app-footer></app-footer>

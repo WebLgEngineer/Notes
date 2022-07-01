@@ -1,0 +1,10 @@
+
+<ul>
+  <li *ngFor="let item of list">
+    <app-acticle-header [item]="item" (delete)="doDelete($event)"></app-acticle-header>
+  </li>
+</ul>
+<app-acticle-header ></app-acticle-header>
+<app-acticle-body></app-acticle-body>
+<app-acticle-footer></app-acticle-footer>
+<p>article-list works!</p>
