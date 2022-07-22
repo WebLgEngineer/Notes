@@ -7,15 +7,17 @@
 LockBodyScrollService得部分是生成時產生的一些動畫效果，還沒研究要怎麼改
 
 ## 實際運用
-
-constructor 內新增 private componentInjector: ComponentInjectorService
-
-生成component
+```typescript
+constructor(
+    private private componentInjector: ComponentInjectorService
+){}
 ```
+生成component
+```typescript
 // injectComponent(需生成之component,{ 放置需生成之component內需@Input()的值 })
 this.componentInjector.injectComponent(ErrarDialogComponent, { errorMessage: v.Result!.Alert, displayModal: true });
 ```
 去除component
-```
+```typescript
 this.componentInjector.disposeComponent(ErrarDialogComponent);
 ```
